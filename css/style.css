@@ -1,75 +1,179 @@
 * {
-    box-sizing: border-box; /* padding не будет расширять блок, а брато отступы внутри*/
+  box-sizing: border-box; /* padding не будет расширять блок, а брато отступы внутри*/
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 15px; /* шрифт для всего сайта по умолчанию (из Фигмы)*/
-    line-height: 24px; /* высота строки для всего сайта по умолчанию из Фигмы*/
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px; /* шрифт для всего сайта по умолчанию (из Фигмы)*/
+  line-height: 24px; /* высота строки для всего сайта по умолчанию из Фигмы*/
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
-    background-image: url(../images/header-bg.jpg);
-    min-height: 793px;
-    background-repeat: no-repeat; /*если картинка ммаленькая, т оне повторяется на экране */
-    background-size: cover; /* картинка растягивается на экран */
-    background-position: top center;
+  background-image: url(../images/header-bg.jpg);
+  min-height: 793px;
+  background-repeat: no-repeat; /*если картинка ммаленькая, т оне повторяется на экране */
+  background-size: cover; /* картинка растягивается на экран */
+  background-position: top center;
 }
 
 .container {
-    max-width: 1200px; /* Обычное расстояние 1170, но это с учетом паддингов 15 */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  max-width: 1200px; /* Обычное расстояние 1170, но это с учетом паддингов 15 */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header__top {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
 }
 
 .menu__list {
-    display: flex;
+  display: flex;
 }
 
-.menu__list li + li { /*подразумевается, что свойство действует на все li начиная со 2-й*/
-    padding-left: 50px;
+.menu__list li + li {
+  /*подразумевается, что свойство действует на все li начиная со 2-й*/
+  padding-left: 50px;
 }
 
 .login {
-    padding-right: 44px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 600;
+  margin-right: 44px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
 }
 
-.menu__list a{
+.menu__list a {
+  opacity: 0.5;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.5s; /*время изменения прозрачности - плавно за полсекунды*/
+}
+
+.menu__list a:hover {
+  opacity: 1;
+}
+
+.sign-up {
+  text-transform: uppercase;
+  color: #250f8a;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 8px 43px;
+  border-radius: 20px;
+}
+
+.header-slider {
+  padding-top: 111px;
+}
+.header-slider__item {
+}
+.header-slider__item-content {
+  display: flex;
+  justify-content: space-between;
+}
+.header-slider__item-info {
+  max-width: 506px;
+  color: #ffffff;
+}
+.header-slider__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 60px;
+  margin-bottom: 10px;
+}
+.header_slider__description {
+  line-height: 50px;
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+.headder-slider__btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #250f8a;
+  padding: 13px 39px;
+  background-color: #ffca00;
+  border-radius: 25px;
+}
+.header-slider__item-images {
+  margin-top: 22px;
+  margin-right: 79px;
+}
+
+.header-dots {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.header-dots button {
+    border: none;
+    background-color: #fff;
     opacity: 0.5;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: all 0.5s; /*время изменения прозрачности - плавно за полсекунды*/
+    font-size: 0;
+    padding: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+    cursor: pointer;
+    outline: none;
+    display: block; /*кнопки - строчные элементы - для них не работает margin (делаем элемент блочным*/
+    margin: 10px auto;
 }
-
-.menu__list a:hover{
+.header-dots .slick-active button {
+    width: 15px;
     opacity: 1;
 }
 
-.sign-up{
-    text-transform: uppercase;
-    color: #250F8A;
-    font-weight: 600;
-    background-color: #fff;
-    padding: 8px 43px;
-    border-radius: 20px;
+.specialised {
+    padding: 55px 0 93px;
+    background-image: url(../images/special-bg.svg);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    color: #202020;
 }
 
-
+.specialised__title {
+    margin-bottom: 96px;
+}
+.title {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;
+    text-align: center; 
+}
+.specialised__items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.specialised__item {
+    width: 280px;
+    
+}
+.specialised__item-img {
+    margin-bottom: 23px;
+}
+.specialised__item-title {
+    margin-bottom: 11px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.specialised__item-text {
+    padding: 0 10px;
+    color: #272727;
+    opacity: 0.7;
+    text-align: center;
+}
