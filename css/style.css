@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box; /* padding не будет расширять блок, а брато отступы внутри*/
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px; /* шрифт для всего сайта по умолчанию (из Фигмы)*/
+    line-height: 24px; /* высота строки для всего сайта по умолчанию из Фигмы*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background-image: url(../images/header-bg.jpg);
+    min-height: 793px;
+    background-repeat: no-repeat; /*если картинка ммаленькая, т оне повторяется на экране */
+    background-size: cover; /* картинка растягивается на экран */
+    background-position: top center;
+}
+
+.container {
+    max-width: 1200px; /* Обычное расстояние 1170, но это с учетом паддингов 15 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__list li + li { /*подразумевается, что свойство действует на все li начиная со 2-й*/
+    padding-left: 50px;
+}
+
+.login {
+    padding-right: 44px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+}
+
+.menu__list a{
+    opacity: 0.5;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.5s; /*время изменения прозрачности - плавно за полсекунды*/
+}
+
+.menu__list a:hover{
+    opacity: 1;
+}
+
+.sign-up{
+    text-transform: uppercase;
+    color: #250F8A;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 8px 43px;
+    border-radius: 20px;
+}
+
+
